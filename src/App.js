@@ -7,11 +7,18 @@ function App() {
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
-    .then(data => setCountries(data))
+    .then(data => {
+      setCountries(data);
+      const name = data.map(country => country.name.common);
+      console.log(name);
+    })
   },[]);
   return (
     <>
-      <h1>Country loaded: {countries.name}</h1>
+      <h1>Country loaded from json placeholder : {countries.length}</h1>
+      <ol>
+        {countries.map(country => <li>{country.name.common}</li>)}
+      </ol>
     </>
   );
 }
