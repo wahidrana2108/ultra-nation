@@ -15,7 +15,7 @@ function App() {
   },[]);
   return (
     <>
-      <h1>Country loaded from json placeholder : {countries.length}</h1>
+      <h1>Data loaded of {countries.length} countries</h1>
       <ol>
         {countries.map(country => <li>{country.name.common}</li>)}
       </ol>
