@@ -15,7 +15,7 @@ function App() {
   },[]);
   return (
     <>
-      <h1>Data loaded of {countries.length} countries.</h1>
+      <h1>Data loaded of {countries.length} countries from database.</h1>
       <ol>
         {countries.map(country => <li>{country.name.common}</li>)}
       </ol>
