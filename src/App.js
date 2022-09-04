@@ -17,7 +17,7 @@ function App() {
     <>
       <h1>Loaded {countries.length} countries from database.</h1>
       <ol>
-        {countries.map(country => <li>{country.name.common} <img src={country.flags.png} alt="" /> </li>)}
+        {countries.map(country => <li>{country.name.common} <br /> <img src={country.flags.png} alt="" /> </li>)}
       </ol>
     </>
   );
