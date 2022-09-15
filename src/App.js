@@ -9,15 +9,15 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setCountries(data);
-      const name = data.map(country => country.name.common);
+      const name = data.map(country => country.name);
       console.log(name);
     })
   },[]);
   return (
     <>
-      <h1>Loaded {countries.length} countries from database.</h1>
+      <h1 className='head'>Loaded {countries.length} countries from database...</h1>
       <ol>
-        {countries.map(country => <li>{country.name.common} <br /> <img src={country.flags.png} alt="" /> </li>)}
+        {countries.map(country => <li>{country.name.official} <img src={country.flags.png} alt="" /> </li>)}
       </ol>
     </>
   );
