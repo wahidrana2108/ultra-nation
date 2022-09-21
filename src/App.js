@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import Country from './components/Country/Country';
 
 function App() {
   const[countries, setCountries] = useState([]);
@@ -17,7 +18,7 @@ function App() {
     <>
       <h1 className='head'>Loaded {countries.length} countries from database...</h1>
       <ol>
-        {countries.map(country => <li>{country.name.official} <img src={country.flags.png} alt="" /> </li>)}
+        {countries.map(country => <Country country = {country} key = {country.name.official}></Country>)}
       </ol>
     </>
   );
