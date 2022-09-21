@@ -39,6 +39,8 @@
 }
 
 .head{
-  background-image: linear-gradient(to right, rgba(240, 3, 165, 0.979), rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(to right, rgba(155, 165, 220, 0.979), rgba(62, 52, 52, 0.9));
+  color: white;
+  text-align: center;
 }
 
